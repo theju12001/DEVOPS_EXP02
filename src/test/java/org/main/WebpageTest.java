@@ -15,11 +15,12 @@ public class WebpageTest {
     public void openBrowser() throws InterruptedException {
 
         driver = new ChromeDriver();
+
         driver.manage().window().maximize();
 
         Thread.sleep(2000);
 
-        driver.get("https://your-github-link.github.io/");
+        driver.get("https://www.google.com");
     }
 
     @Test
@@ -27,7 +28,9 @@ public class WebpageTest {
 
         String actualTitle = driver.getTitle();
 
-        String expectedTitle = "Webpage Design";
+        System.out.println(actualTitle);
+
+        String expectedTitle = "Google";
 
         Assert.assertEquals(actualTitle, expectedTitle);
 
